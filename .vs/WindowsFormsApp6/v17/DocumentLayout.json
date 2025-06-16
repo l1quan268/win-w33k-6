@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\serverform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\serverform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\serverform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\serverform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\syncmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\syncmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\stroke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\stroke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\serverform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\serverform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|c:\\users\\duc thinh\\documents\\l\u1EADp tr\u00ECnh m\u1EA1ng\\th\\week 3\\windowsformsapp6\\windowsformsapp6\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{967A3529-A1B5-4CE6-9BC7-89E295234139}|WindowsFormsApp6\\WindowsFormsApp6.csproj|solutionrelative:windowsformsapp6\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SyncMessage.cs",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\SyncMessage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\SyncMessage.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\SyncMessage.cs",
+              "RelativeToolTip": "WindowsFormsApp6\\SyncMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:25:22.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Stroke.cs",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\Stroke.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\Stroke.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\Stroke.cs",
+              "RelativeToolTip": "WindowsFormsApp6\\Stroke.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:25:12.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServerForm.cs",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\ServerForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\ServerForm.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\ServerForm.cs",
+              "RelativeToolTip": "WindowsFormsApp6\\ServerForm.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:16:04.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServerForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\ServerForm.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\ServerForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\ServerForm.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp6\\ServerForm.Designer.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwC0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:14:49.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServerForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\ServerForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\ServerForm.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\ServerForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp6\\ServerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:14:46.753Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MenuForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\MenuForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\MenuForm.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp6\\MenuForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:14:44.316Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\Form1.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp6\\Form1.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAuwM0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:14:04.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp6\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Duc Thinh\\Documents\\L\u1EADp tr\u00ECnh m\u1EA1ng\\TH\\Week 3\\WindowsFormsApp6\\WindowsFormsApp6\\Form1.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp6\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:12:44.889Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\bin\Debug\WhiteboardServer.exe.config
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\bin\Debug\WhiteboardServer.exe
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\bin\Debug\WhiteboardServer.pdb
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\obj\Debug\WhiteboardServer.csproj.AssemblyReference.cache
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\obj\Debug\WhiteboardServer.Properties.Resources.resources
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\obj\Debug\WhiteboardServer.csproj.GenerateResource.cache
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\obj\Debug\WhiteboardServer.csproj.CoreCompileInputs.cache
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\obj\Debug\WhiteboardServer.exe
-D:\th-mọng\week-6\WhiteboardApp_FullSolution\WhiteboardServer\WhiteboardServer\WhiteboardServer\obj\Debug\WhiteboardServer.pdb
