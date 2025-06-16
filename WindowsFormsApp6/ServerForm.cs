@@ -5,7 +5,8 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
-
+using System.Net.Mail;
+using System.Drawing;
 namespace WindowsFormsApp6
 {
     public partial class ServerForm : Form
@@ -13,14 +14,23 @@ namespace WindowsFormsApp6
         private TcpListener server;
         private readonly List<TcpClient> clients = new List<TcpClient>();
         private readonly List<Stroke> strokeList = new List<Stroke>();
+        private readonly List<ImageData> imageList = new List<ImageData>();
         private readonly object lockObj = new object();
         private bool isRunning = false;
-
+        private bool emailSent = false;
         public ServerForm()
         {
             InitializeComponent();
         }
-
+        private void BroadcastClientCount()
+        {
+            SyncMessage countMsg = new SyncMessage
+            {
+                Type = SyncMessage.ActionType.ClientCount,
+                ClientCount = clients.Count
+            };
+            Broadcast(countMsg, null);
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (isRunning) return;
@@ -39,7 +49,8 @@ namespace WindowsFormsApp6
                         TcpClient client = server.AcceptTcpClient();
                         lock (lockObj)
                             clients.Add(client);
-
+                        BroadcastClientCount();
+                        CheckClientLimit();
                         Thread clientThread = new Thread(() => HandleClient(client));
                         clientThread.IsBackground = true;
                         clientThread.Start();
@@ -64,8 +75,8 @@ namespace WindowsFormsApp6
             }
             catch (Exception ex)
             {
-                Log($"❌ Lỗi khi lấy stream từ client: {ex.Message}");
                 lock (lockObj) clients.Remove(client);
+                BroadcastClientCount();
                 return;
             }
 
@@ -101,6 +112,20 @@ namespace WindowsFormsApp6
                             try
                             {
                                 fmt.Serialize(ns, fullSync);
+                                lock (lockObj)
+                                {
+                                    foreach (var img in imageList)
+                                    {
+                                        SyncMessage imgMsg = new SyncMessage
+                                        {
+                                            Type = SyncMessage.ActionType.Image,
+                                            ImageBytes = img.ImageBytes,
+                                            ImageBounds = img.Bounds,
+                                            ImageId = img.Id
+                                        };
+                                        fmt.Serialize(ns, imgMsg);
+                                    }
+                                }
                                 if (!hasLoggedConnected)
                                 {
                                     Log($"➡ Client connected: {client.Client.RemoteEndPoint}");
@@ -112,13 +137,30 @@ namespace WindowsFormsApp6
                                 Log($"❌ Lỗi khi gửi FullSync: {ex.Message}");
                             }
                             break;
+                        case SyncMessage.ActionType.Image:
+                            lock (lockObj)
+                            {
+                                var imgData = new ImageData
+                                {
+                                    Id = msg.ImageId,
+                                    ImageBytes = msg.ImageBytes,
+                                    Bounds = msg.ImageBounds
+                                };
+                                imageList.Add(imgData);
+                            }
+                            Broadcast(msg, client);
+                            break;
                     }
                 }
             }
             catch
             {
-                lock (lockObj) clients.Remove(client);
-                Log($"⚠ Client disconnected: {client.Client.RemoteEndPoint}");
+                lock (lockObj)
+                {
+                    clients.Remove(client);
+                    if (clients.Count < 6) emailSent = false; 
+                }
+                BroadcastClientCount();
                 client.Close();
             }
         }
@@ -139,7 +181,7 @@ namespace WindowsFormsApp6
                         }
                         catch
                         {
-                            // Ignore broken client
+                            
                         }
                     }
                 }
@@ -157,5 +199,44 @@ namespace WindowsFormsApp6
                 lstClients.Items.Add(message);
             }
         }
+        private void CheckClientLimit()
+        {
+            if (clients.Count >=6 && !emailSent) 
+            {
+                try
+                {
+                    Log("📧 Đang gửi email cảnh báo...");
+                    
+                    using (var mail = new System.Net.Mail.MailMessage())
+                    {
+                        mail.From = new MailAddress("test@gmail.com");
+                        mail.To.Add("admin@company.com");
+                        mail.Subject = "Whiteboard Client Limit Warning";
+                        mail.Body = $"Client limit reached: {clients.Count} clients connected";
+
+                        using (var smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587))
+                        {
+                            smtp.Credentials = new System.Net.NetworkCredential("your-email@gmail.com", "your-password");
+                            smtp.EnableSsl = true;
+                            smtp.Send(mail);
+                        }
+                    }
+                    emailSent = true;
+                    Log("📧 Email cảnh báo đã được gửi!");
+                }
+                catch (Exception ex)
+                {
+                    Log($"❌ Lỗi gửi email: {ex.Message}");
+                    Log($"⚠ Số lượng client đã đạt giới hạn {clients.Count}!");
+                }
+            }
+        }
+    }
+    [Serializable]
+    public class ImageData
+    {
+        public Guid Id { get; set; }
+        public byte[] ImageBytes { get; set; }
+        public Rectangle Bounds { get; set; }
     }
 }

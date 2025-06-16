@@ -17,9 +17,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lstClients = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // btnStart
-            // 
+            
             this.btnStart.Location = new System.Drawing.Point(12, 12);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(120, 30);
@@ -27,18 +25,14 @@
             this.btnStart.Text = "Start Server";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // lstClients
-            // 
+            
             this.lstClients.FormattingEnabled = true;
             this.lstClients.ItemHeight = 16;
             this.lstClients.Location = new System.Drawing.Point(12, 60);
             this.lstClients.Name = "lstClients";
             this.lstClients.Size = new System.Drawing.Size(400, 260);
             this.lstClients.TabIndex = 1;
-            // 
-            // ServerForm
-            // 
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(430, 340);
             this.Controls.Add(this.lstClients);

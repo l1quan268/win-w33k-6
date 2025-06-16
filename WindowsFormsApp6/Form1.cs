@@ -17,7 +17,7 @@ namespace WindowsFormsApp6
         private Stroke currentStroke;
         private bool isDrawing = false;
         private Pen currentPen = new Pen(Color.Black, 2);
-
+        private List<ImageData> images = new List<ImageData>();
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +65,20 @@ namespace WindowsFormsApp6
                         case SyncMessage.ActionType.Delete:
                             strokes.RemoveAll(s => s.Id == msg.StrokeIdToDelete);
                             break;
+                        case SyncMessage.ActionType.ClientCount: 
+                            this.Invoke(new Action(() =>
+                                lblClientCount.Text = $"Clients connected: {msg.ClientCount}"));
+                            break;
+                        case SyncMessage.ActionType.Image: 
+                            var imgData = new ImageData
+                            {
+                                Id = msg.ImageId,
+                                ImageBytes = msg.ImageBytes,
+                                Bounds = msg.ImageBounds
+                            };
+                            images.Add(imgData);
+                            break;
+
                     }
 
                     panel1.Invoke(new Action(() => panel1.Invalidate()));
@@ -79,7 +93,18 @@ namespace WindowsFormsApp6
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.Clear(Color.White);
-
+            foreach (var img in images)
+            {
+                try
+                {
+                    using (var ms = new System.IO.MemoryStream(img.ImageBytes))
+                    {
+                        Image image = Image.FromStream(ms);
+                        e.Graphics.DrawImage(image, img.Bounds);
+                    }
+                }
+                catch { }
+            }
             foreach (var stroke in strokes)
             {
                 using (Pen pen = new Pen(stroke.Color, stroke.Width))
@@ -180,26 +205,56 @@ namespace WindowsFormsApp6
 
         private void btnInsertImage_Click(object sender, EventArgs e)
         {
-            string url = Microsoft.VisualBasic.Interaction.InputBox("Nhập URL hình ảnh:", "Chèn ảnh", "http://");
+            string url = Microsoft.VisualBasic.Interaction.InputBox("Nhập URL hình ảnh:", "Chèn ảnh", "https://");
             if (!string.IsNullOrWhiteSpace(url))
             {
                 try
                 {
-                    System.Net.WebRequest request = System.Net.WebRequest.Create(url);
+                   
+                    string actualImageUrl = ExtractImageUrlFromGoogle(url);
+                    System.Net.ServicePointManager.ServerCertificateValidationCallback =
+                        (sender2, certificate, chain, sslPolicyErrors) => true;
+                    System.Net.ServicePointManager.SecurityProtocol =
+                        System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls;
+
+                    System.Net.WebRequest request = System.Net.WebRequest.Create(actualImageUrl);
+                    request.Timeout = 10000;
                     using (System.Net.WebResponse response = request.GetResponse())
                     using (System.IO.Stream stream = response.GetResponseStream())
+                    using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
                     {
-                        Image img = Image.FromStream(stream);
-                        Graphics g = panel1.CreateGraphics();
-                        g.DrawImage(img, new Rectangle(50, 50, 200, 200));
-                        g.Dispose();
+                        stream.CopyTo(ms);
+                        byte[] imageBytes = ms.ToArray();
+
+                        SyncMessage imgMsg = new SyncMessage
+                        {
+                            Type = SyncMessage.ActionType.Image,
+                            ImageBytes = imageBytes,
+                            ImageBounds = new Rectangle(50, 50, 200, 200),
+                            ImageId = Guid.NewGuid()
+                        };
+                        formatter.Serialize(netStream, imgMsg);
                     }
                 }
-                catch
+                catch (Exception ex) 
                 {
-                    MessageBox.Show("Không thể tải ảnh từ URL.");
+                    MessageBox.Show($"Không thể tải ảnh từ URL: {ex.Message}");
                 }
             }
+        }
+        private string ExtractImageUrlFromGoogle(string googleUrl)
+        {
+            if (googleUrl.Contains("google.com/imgres") && googleUrl.Contains("imgurl="))
+            {
+                int startIndex = googleUrl.IndexOf("imgurl=") + 7;
+                int endIndex = googleUrl.IndexOf("&", startIndex);
+                if (endIndex == -1) endIndex = googleUrl.Length;
+
+                string encodedUrl = googleUrl.Substring(startIndex, endIndex - startIndex);
+                return System.Net.WebUtility.UrlDecode(encodedUrl);
+            }
+
+            return googleUrl;
         }
     }
 }

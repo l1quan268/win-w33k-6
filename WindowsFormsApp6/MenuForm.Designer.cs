@@ -17,9 +17,7 @@
             this.btnClient = new System.Windows.Forms.Button();
             this.btnServer = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnClient
-            // 
+            
             this.btnClient.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnClient.Location = new System.Drawing.Point(40, 30);
             this.btnClient.Name = "btnClient";
@@ -28,9 +26,7 @@
             this.btnClient.Text = "Run as Client";
             this.btnClient.UseVisualStyleBackColor = true;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
-            // 
-            // btnServer
-            // 
+           
             this.btnServer.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnServer.Location = new System.Drawing.Point(40, 90);
             this.btnServer.Name = "btnServer";
@@ -39,9 +35,7 @@
             this.btnServer.Text = "Run as Server";
             this.btnServer.UseVisualStyleBackColor = true;
             this.btnServer.Click += new System.EventHandler(this.btnServer_Click);
-            // 
-            // MenuForm
-            // 
+            
             this.ClientSize = new System.Drawing.Size(260, 170);
             this.Controls.Add(this.btnServer);
             this.Controls.Add(this.btnClient);
